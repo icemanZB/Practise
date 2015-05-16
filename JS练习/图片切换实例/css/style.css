@@ -1,0 +1,14 @@
+body,ul { padding:0; margin:0; }
+li { list-style:none; }
+img{ border: none; vertical-align: top;}
+body { background:#333; }
+#pic { width:400px; height:500px; position:relative; margin:0 auto;
+    background:url(../img/loader_ico.gif) no-repeat center #fff; }
+#pic img { width:400px; height:500px; }
+#pic ul { width:40px; position:absolute; top:0; right:-50px; }
+#pic li { width:40px; height:40px; margin-bottom:4px; background:#666; }
+#pic .active { background:#FC3; }
+#pic span { top:0; }
+#pic p { bottom:0; margin:0; }
+#pic p,#pic span { position:absolute; left:0; width:400px; height:30px;
+    line-height:30px; text-align:center; color:#fff; background:#000; }

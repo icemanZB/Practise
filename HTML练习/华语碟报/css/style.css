@@ -1,0 +1,18 @@
+body,ul,h2,h3{ margin: 0;padding: 0; font-size: 12px; font-weight: '宋体'}
+li{ list-style: none;}
+a{ text-decoration: none; color: #333333;}
+img{ border: none; vertical-align: top;}
+.clear{ zoom: 1;}
+.clear:after{ content: "";display: block;clear: both;}
+.wrap{ width: 378px; background: #f4fafb; margin: 30px auto; padding-top: 12px;}
+.header{ height:25px; background:url(../img/headerBg.png) no-repeat; }
+.header h2{ color: #294852; background: url(../img/h2Bg.png) no-repeat 10px 6px; line-height: 24px;
+ text-indent: 32px;}
+.picList{ padding-top: 16px;}
+.picList li{ float: left; background: url(../img/liBg.png) no-repeat right 18px; width: 91px;
+    padding-right: 18px; margin: 0 8px; display:inline;}
+.picList a{ display: block; }
+.picList img{ padding: 2px; border: 1px solid #c8c4d3; background: #ffffff;}
+.picList h3{ color: #333333; text-align: center; font:normal 12px/22px "宋体"; padding-top: 4px;}
+.textList{ padding:0 27px; line-height: 22px;}
+.textList li{ background: url(../img/textLiBg.png) no-repeat 0 10px; text-indent:14px;}

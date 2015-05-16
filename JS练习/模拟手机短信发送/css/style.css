@@ -1,0 +1,10 @@
+ul{ padding:0; margin:0;}
+li{ list-style:none;}
+a{ text-decoration:none;}
+#wrap{ width:500px; height:500px; overflow:auto; background:#efefef; margin:0 auto;}
+.right{ background:green;}
+.left{ background:#ccc;}
+.line{ width:500px; border-top:1px solid #000; margin:0 auto;}
+#input{  width:500px; margin:30px auto;}
+#you{ display:none; cursor:pointer;}
+#me{ cursor:pointer;}

@@ -1,0 +1,42 @@
+$(function(){
+	$("#btn").click(function(){
+		$("#bg").show();
+		$("#set").show();
+	});
+	
+	$("#setRed").click(function(){
+			$("#box").css("background","red");	
+	});
+	$("#setYellow").click(function(){
+		$("#box").css("background","yellow");	
+	});
+	$("#setBlue").click(function(){
+		$("#box").css("background","blue");	
+	});
+	$("#setWidth200").click(function(){
+		$("#box").css("width","200px");	
+	});
+	$("#setWidth300").click(function(){
+		$("#box").css("width","300px");	
+	});
+	$("#setWidth400").click(function(){
+		$("#box").css("width","400px");	
+	});
+	
+	$("#setHeight200").click(function(){
+		$("#box").css("height","200px");		
+	});
+	$("#setHeight300").click(function(){
+		$("#box").css("height","300px");		
+	});
+	$("#setHeight400").click(function(){
+		$("#box").css("height","400px");		
+	});
+	$("#btnClick").click(function(){
+		$("#bg").hide();
+		$("#set").hide();	
+	});
+	$("#recover").click(function(){
+		$("#box").removeAttr('style');
+	});
+})

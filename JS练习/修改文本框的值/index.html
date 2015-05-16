@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>修改文本框的值</title>
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript">
+window.onload=function(){
+	var aLi=document.getElementsByTagName('li');
+	for(var i=0;i<aLi.length;i++){
+		modify(aLi[i]);
+	}
+
+	function modify(li){
+		var oImg=li.getElementsByTagName('img')[0];
+		var oStrong=li.getElementsByTagName('strong')[0];
+		var oInput=li.getElementsByTagName('input')[0];
+		var aACancle=li.getElementsByTagName('a')[1];
+		var aASave=li.getElementsByTagName('a')[0];
+
+		oImg.onclick=function(){
+			li.getElementsByTagName('div')[0].style.display='none';
+			li.getElementsByTagName('div')[1].style.display='block';
+			oInput.value= oStrong.innerHTML;
+		};
+
+		aACancle.onclick=function(){
+			li.getElementsByTagName('div')[1].style.display='none';
+			li.getElementsByTagName('div')[0].style.display='block';
+		};
+
+		aASave.onclick=function(){
+			li.getElementsByTagName('div')[1].style.display='none';
+			li.getElementsByTagName('div')[0].style.display='block';
+			oStrong.innerHTML=oInput.value;
+		}
+	}
+};
+</script>
+</head>
+
+<body>
+
+<div class="wrap">
+	<h2>分类名称</h2>
+	<ul>
+		<li>
+			<div class="default clear">
+				<strong>秒味远程课堂</strong>
+				<img src="img/modify.png" alt=""/>
+			</div>
+			<div class="modify">
+				<input type="text"/>
+				<a href="#">保存</a>
+				<a href="#">取消</a>
+			</div>
+		</li>
+		<li>
+			<div class="default clear">
+				<strong>秒味远程课堂</strong>
+				<img src="img/modify.png" alt=""/>
+			</div>
+			<div class="modify">
+				<input type="text"/>
+				<a href="#">保存</a>
+				<a href="#">取消</a>
+			</div>
+		</li>
+	</ul>
+</div>
+</body>
+</html>

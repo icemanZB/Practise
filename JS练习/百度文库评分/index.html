@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>百度评分</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript">
+        window.onload = function () {
+            var oBox = document.getElementById('box'),
+                    oTip = document.getElementById('tip'),
+                    oMark = document.getElementById('mark'),
+                    aA = oBox.getElementsByTagName('a'),
+                    arr = ['很差', '差', '还行', '推荐', '力荐'],
+                    bMark = true,
+                    num = 0;
+            for(var i=0;i<aA.length;i++){
+                aA[i].index = i;
+                aA[i].onmouseover = function(){
+                    oTip.style.display = 'none';
+                    oMark.style.display = 'block';
+                    reset();
+                    change(this.index)
+                };
+
+                aA[i].onmouseout = function(){
+                    reset();
+                    if(bMark){
+                        oTip.style.display = 'block';
+                        oMark.style.display = 'none';
+                    }else{
+                        change(num);
+                    }
+                };
+
+                aA[i].onclick = function(ev){
+                    var ev = ev || event;
+                    if (ev.preventDefault)
+                    {
+                        ev.preventDefault();
+                    }
+                    else{
+                        ev.returnValue = false;
+                    }
+                    bMark = false;
+                    oMark.innerHTML = arr[this.index];
+                    num = this.index;
+                };
+
+                function reset(){
+                    for(var i=0;i<aA.length;i++){
+                        aA[i].style.background = 'url(img/3.gif) no-repeat';
+                    }
+                }
+
+                function change(iNum) {
+                    if (iNum <= 1) {
+                        for (var i = 0; i <= iNum; i++) {
+                            aA[i].style.background = 'url(img/0.gif) no-repeat';
+                            oMark.innerHTML = arr[i];
+                        }
+                    } else {
+                        for (var i = 0; i <= iNum; i++) {
+                            aA[i].style.background = 'url(img/1.gif) no-repeat';
+                            oMark.innerHTML = arr[i];
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <p id='p'><span>*</span>总体评价:</p>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+
+    <div id="tip">
+        <span></span>
+        <p>小提示:点击星星就能打分</p>
+    </div>
+    <div id="mark"></div>
+</div>
+</body>
+</html>

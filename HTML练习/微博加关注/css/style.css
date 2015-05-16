@@ -1,0 +1,25 @@
+body,ul,p,h2,h3{ padding: 0; margin: 0; font-family: '宋体';font-size:12px; }
+li{ list-style: none}
+img{ border:none; vertical-align: top;}
+a{ text-decoration: none;}
+.clear{ zoom: 1;}
+.clear:after{ content: ""; display: block; clear: both;}
+.wrap{ width: 689px; margin: 30px auto;}
+.header{ width:680px; padding: 4px 4px 0 5px;}
+.header h2{ color: #333333; line-height: 29px; font-weight: normal; float: left;}
+.header div{ float: right;}
+.header div a{ padding-left: 2px; }
+.list{ width: 680px; padding: 6px 4px 0 5px; }
+.list li{ width: 313px; padding: 10px; border: 1px solid #e6e6e6; float: left; margin: 0 10px 10px 0;}
+.list li.mR0{ margin-right: 0; display:inline; }
+.list .img{ width: 80px; float: left; }
+.list .img img{ }
+.list .img a{ width: 80px; height: 37px; background: url(../img/guanzhu.png) no-repeat 14px 12px;
+    display: inline-block; }
+.list .text{ width: 223px; float: left; padding-left: 10px;}
+.list .text h3{ padding-bottom: 5px;}
+.list .text strong{ color: #0a8cd2;}
+.list .text img{ padding-left: 3px;}
+.list .text p{ color: #808080; line-height: 20px;}
+.list .text p strong{ font-weight: normal;}
+.list .text span{ color: #333333; line-height: 20px;}

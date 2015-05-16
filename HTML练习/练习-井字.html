@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+
+        .center {
+            margin: 0 auto;
+            width: 450px;
+            height: 450px;
+        }
+
+        .box, .box2 {
+            width: 450px;
+            height: 150px;
+        }
+
+        .box div {
+            width: 149px;
+            height: 150px;
+            float: left;
+        }
+
+        .box2 div {
+            width: 149px;
+            height: 148px;
+            float: left;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        .box .border, .box2 .border {
+            border-right: 1px solid black;
+        }
+
+        .box .width, .box2 .width {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+<div class="center">
+    <div class="box">
+        <div class="border"></div>
+        <div class="border"></div>
+        <div class="width"></div>
+    </div>
+    <div class="box2">
+        <div class="border"></div>
+        <div class="border"></div>
+        <div class="width"></div>
+    </div>
+    <div class="box">
+        <div class="border"></div>
+        <div class="border"></div>
+        <div class="width"></div>
+    </div>
+</div>
+
+</body>
+</html>

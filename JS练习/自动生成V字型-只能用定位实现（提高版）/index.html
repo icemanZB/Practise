@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>自动生成V字型-只能用定位实现（提高版）</title>
+    <style type="text/css">
+        body, ul {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            position: relative;
+        }
+
+        li {
+            list-style: none;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background: red;
+            line-height: 50px;
+            text-align: center;
+            font-size: 20px;
+            color: #ffffff;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-2.0.2.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var str="";
+            var num=0;
+            $("#btn").click(function(){
+                if(num ==0){
+                    $("#list").empty();
+                    str = "";
+                    num++;
+                    for(var i=0;i<5;i++){
+                        if(i>1){
+                            str +="<li style='left:"+i*55+"px;top:"+(i-2)*55+"px;'>"+i+"</li>";
+                        }else{
+                            str +="<li style='left:"+i*55+"px;top:"+110/(i+1)+"px;'>"+i+"</li>";
+                        }
+                    }
+                }else if(num==3){
+                    $("#list").empty();
+                    str = "";
+                    for(var i=0;i<5;i++){
+                        if(i>1){
+                            str +="<li style='left:"+(i-2)*55+"px;top: "+i*55+"px;'>"+i+"</li>";
+                        }else{
+                            str +="<li style='left:"+110/(i+1)+"px;top: "+i*55+"px;'>"+i+"</li>";
+                        }
+                    }
+                    num = 0;
+                }else if(num==1){
+                    $("#list").empty();
+                    str = "";
+                    num++;
+                    for(var i=0;i<5;i++){
+                        if(i>2){
+                            str +="<li style='left:"+i%2*55+"px;top:"+i*55+"px;'>"+i+"</li>";
+                        }else{
+                            str +="<li style='left:"+i*55+"px;top:"+i*55+"px;'>"+i+"</li>";
+                        }
+                    }
+
+                }else if(num==2){
+                    $("#list").empty();
+                    str = "";
+                    num++;
+                    for(var i=0;i<5;i++){
+                        if(i>2){
+                            str +="<li style='left:"+i*55+"px;top: "+(i%2)*55+"px;'>"+i+"</li>";
+                        }else{
+                            str +="<li style='left:"+i*55+"px;top: "+i*55+"px;'>"+i+"</li>";
+                        }
+                    }
+                }
+
+                $("#list").append(str);
+            });
+
+        })
+    </script>
+</head>
+
+<body>
+<input id="btn" type="button" value="自动生成V字型"/>
+<ul id="list">
+    <!--
+    <li style="left: 0px;top: 110px;">0</li>  2
+    <li style="left: 55px;top: 55px;">1</li>  1
+    <li style="left: 110px;top: 0px;">2</li>  0
+    <li style="left: 165px;top: 55px;">3</li> 1
+    <li style="left: 220px;top: 110px;">4</li>2
+
+    <li style="left: 0px;top: 0;">0</li>
+    <li style="left: 55px;top: 55px;">1</li>
+    <li style="left: 110px;top: 110px;">2</li>
+    <li style="left: 55px;top: 165px;">3</li>
+    <li style="left: 0px;top: 220px;">4</li>
+
+    <li style="left: 110px;top: 0;">0</li>
+    <li style="left: 55px;top: 55px;">1</li>
+    <li style="left: 0px;top: 110px;">2</li>
+    <li style="left: 55px;top: 165px;">3</li>
+    <li style="left: 110px;top: 220px;">4</li>
+    -->
+</ul>
+</body>
+</html>

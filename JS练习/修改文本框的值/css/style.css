@@ -1,0 +1,12 @@
+html,body,h2,ul{ padding: 0; margin: 0; font-size: 12px; font-family: 'ËÎÌו';}
+li{ list-style: none;}
+a{ text-decoration: none; color: #429400;}
+img{ border: none; vertical-align: top;}
+.clear{ zoom: 1;}
+.clear:after{ content: ""; display: block; clear: both;}
+.wrap{ width: 569px; margin: 30px auto;}
+h2{ color: #ffffff; height: 28px; line-height: 28px; background: #6ba542; text-indent: 25px;}
+li{ width: 569px; height: 39px; vertical-align: top;}
+.default strong{ float: left; text-indent: 24px; line-height: 39px;}
+.default img{ float: left; padding: 10px 0 0 11px; cursor: pointer;}
+.modify{ padding: 10px 0 0 11px; display: none;}

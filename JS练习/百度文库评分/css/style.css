@@ -1,0 +1,13 @@
+p {margin:0;padding:0;}
+#box{ border:1px solid #000; padding:20px 0 0 6px; position:relative; width:494px; height:40px;  }
+#p{ float:left; font-size:16px; height:21px; line-height:21px; font-weight:bold; }
+p span{ color:red; }
+a{ display:block; height:21px; width:20px; float:left; padding-left:5px;
+    background:url(../img/3.gif) no-repeat; }
+#tip{ border:1px solid #dedeb5; width:234px; height:38px; position:absolute;
+    top:10px; right:33px; background:#ffffe7 url(../img/tip.gif) no-repeat 150px 14px; }
+#tip span{ display:block; width:5px; height:7px; overflow:hidden; position:absolute;
+    background:url(../img/san.gif) no-repeat; top:16px; left:-5px; }
+#tip p{ font-size:12px; color:#94948c; position:absolute; top:14px; left:7px; }
+#mark{ float:left; font-size:14px; font-weight:bold; color:#ef7300; position:absolute;
+    top:26px; right:244px; display:none; }

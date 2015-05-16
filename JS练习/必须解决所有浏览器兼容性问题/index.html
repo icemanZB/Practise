@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>必须解决所有浏览器兼容性问题</title>
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/jquery-2.0.2.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){
+            var oUl=document.getElementById('list');
+            var aLi=oUl.getElementsByTagName('li');
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].onmousemove=function(){
+                    this.getElementsByTagName('div')[0].style.display="block";
+                }
+                aLi[i].onmouseout=function(){
+                    this.getElementsByTagName('div')[0].style.display="none";
+                }
+            }
+        };
+       /* $(function(){
+            $("#list").find('li').hover(function(){
+                $(this).find('div').show();
+            },function(){
+                $(this).find('div').hide();
+            });
+        })
+       */
+    </script>
+</head>
+
+<body>
+<ul id="list">
+    <li>
+        <img src="img/1.png" />
+        <div style="top:-100px;left: 50px;"><img src="img/2.png" alt=""/></div>
+    </li>
+    <li>
+        <img src="img/1.png" />
+        <div style="top:-100px;left: 100px;"><img src="img/2.png" alt=""/></div>
+    </li>
+    <li>
+        <img src="img/1.png" />
+        <div style="top:-100px;left: 200px;"><img src="img/2.png" alt=""/></div>
+    </li>
+    <li>
+        <img src="img/1.png" />
+        <div style="top:-100px;left: 250px;"><img src="img/2.png" alt=""/></div>
+    </li>
+    <li>
+        <img src="img/1.png" />
+        <div style="top:-100px;left: 350px;"><img src="img/2.png" alt=""/></div>
+    </li>
+    <li>
+        <img src="img/1.png" />
+        <div style="top:-100px;left: 420px;"><img src="img/2.png" alt=""/></div>
+    </li>
+    <li>
+        <img src="img/1.png" />
+        <div style="top:-10px;left: 30px;"><img src="img/2.png" alt=""/></div>
+    </li>
+    <li>
+        <img src="img/1.png" />
+        <div style="top:-10px;left: 100px;"><img src="img/2.png" alt=""/></div>
+    </li>
+    <li>
+        <img src="img/1.png" />
+        <div style="top:-10px;left: 180px;"><img src="img/2.png" alt=""/></div>
+    </li>
+    <li>
+        <img src="img/1.png" />
+        <div style="top:-10px;left: 260px;"><img src="img/2.png" alt=""/></div>
+    </li>
+    <li>
+        <img src="img/1.png" />
+        <div style="top:-10px;left: 350px;"><img src="img/2.png" alt=""/></div>
+    </li>
+    <li>
+        <img src="img/1.png" />
+        <div style="top:-10px;left: 420px;"><img src="img/2.png" alt=""/></div>
+    </li>
+</ul>
+</body>
+</html>

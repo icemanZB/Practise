@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>控制多组图片切换</title>
+    <style type="text/css">
+        .clear {
+            zoom: 1;
+        }
+        .clear:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        #left {
+            width: 500px;
+            height: 450px;
+            background: orange;
+            float: left;
+            text-align: center;
+        }
+        #left img {
+            width: 480px;
+            height: 380px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #right {
+            width: 300px;
+            height: 450px;
+            background: green;
+            float: left;
+            text-align: center;
+        }
+        #right img {
+            width: 280px;
+            height: 380px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #left h2, #right h2 {
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+        }
+        #left p, #right p {
+            text-align: left;
+            margin: 0;
+            padding: 0 0 0 10px;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-2.0.2.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){
+            var oBtnPrev=document.getElementById('prev'),
+                oBtnNext=document.getElementById('next'),
+                oLeftDiv=document.getElementById('left'),
+                oRightDiv=document.getElementById('right'),
+                oLeftImg=oLeftDiv.getElementsByTagName('img')[0],
+                oRightImg=oRightDiv.getElementsByTagName('img')[0],
+                oH2=oLeftDiv.getElementsByTagName('h2')[0],
+                oRightH2=oRightDiv.getElementsByTagName('h2')[0],
+                oH2Span=oH2.getElementsByTagName('span')[0],
+                oRightH2Span=oRightH2.getElementsByTagName('span')[0],
+                oP=oLeftDiv.getElementsByTagName('p')[0],
+                oRightP=oRightDiv.getElementsByTagName('p')[0],
+                oPSpan=oP.getElementsByTagName('span'),
+                oRightPSpan=oRightP.getElementsByTagName('span'),
+                arrLeftImg=['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg'],
+                arrRightImg=['img/5.png','img/6.png','img/7.png'],
+                leftNum= 0,
+                rightNum=0;
+
+            function leftInit(){
+                oH2Span.innerHTML=leftNum+1;
+                oPSpan[0].innerHTML=leftNum+1;
+                oPSpan[1].innerHTML=arrLeftImg.length;
+                oLeftImg.src=arrLeftImg[leftNum];
+            }
+
+            function rightInit(){
+                oRightH2Span.innerHTML=rightNum+1;
+                oRightPSpan[0].innerHTML=rightNum+1;
+                oRightPSpan[1].innerHTML=arrRightImg.length;
+                oRightImg.src=arrRightImg[rightNum];
+            }
+
+            leftInit();
+            rightInit();
+
+            oLeftImg.onclick=function(){
+                leftNum++;
+
+                if(leftNum > arrLeftImg.length -1) {
+                    leftNum = 0;
+                }
+
+                leftInit();
+            };
+
+            oRightImg.onclick=function(){
+                rightNum++;
+                if(rightNum > arrRightImg.length -1) {
+                    rightNum = 0;
+                }
+                rightInit();
+            };
+
+            oBtnNext.onclick=function(){
+                leftNum++;
+                rightNum++;
+                if(leftNum > arrLeftImg.length -1) {
+                    leftNum = 0;
+                }
+                if(rightNum > arrRightImg.length -1) {
+                    rightNum = 0;
+                }
+                leftInit();
+                rightInit();
+            };
+
+            oBtnPrev.onclick=function(){
+                leftNum--;
+                rightNum--;
+                if(leftNum <0) {
+                    leftNum = arrLeftImg.length -1;
+                }
+                if(rightNum <0) {
+                    rightNum = arrRightImg.length -1;
+                }
+                leftInit();
+                rightInit();
+            };
+
+        };
+    </script>
+</head>
+
+<body>
+<input type="button" value="上一组" id="prev"/>
+<input type="button" value="下一组" id="next"/>
+<div id="container" class="clear">
+    <div id="left">
+        <img src="" />
+        <h2>第一组第<span></span>张</h2>
+        <p><span></span>/<span></span></p>
+    </div>
+    <div id="right">
+        <img src="img/2.jpg" />
+        <h2>第二组第<span></span>张</h2>
+        <p><span></span>/<span></span></p>
+    </div>
+</div>
+</body>
+</html>

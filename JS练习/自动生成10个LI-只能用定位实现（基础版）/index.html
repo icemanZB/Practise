@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>自动生成10个LI</title>
+<style type="text/css">
+    body,ul{ padding: 0; margin: 0;}
+    ul{ position: relative;}
+    li{ list-style: none; width: 50px; height: 50px; position: absolute;
+        border: 1px solid #000000; line-height: 50px;
+        text-align: center; font-size: 20px;}
+</style>
+<script type="text/javascript" src="js/jquery-2.0.2.js"></script>
+<script type="text/javascript">
+   $(function(){
+       var str="";
+       var arr=['red','orange','yellow','green','blue'];
+       $("#btn").click(function(){
+           for(var i=0;i<10;i++){
+               var moveL=i*55;
+               var bgColor=arr[i % arr.length];
+               str+="<li style='left:"+moveL+"px; background:"+bgColor+";'>"+i+"</li>";
+           }
+           $("#list").append(str);
+       });
+
+   })
+</script>
+</head>
+
+<body>
+<input id="btn" type="button" value="自动生成10个LI" />
+<ul id="list">
+</ul>
+</body>
+</html>

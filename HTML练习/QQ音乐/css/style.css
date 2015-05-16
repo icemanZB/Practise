@@ -1,0 +1,21 @@
+body,ul,h1,h2,h3,p{ padding: 0; margin: 0; font-size: 12px; font-family: '宋体'}
+li{ list-style: none;}
+a{ text-decoration: none;}
+img{ border: none; vertical-align: top;}
+.clear{ zoom: 1}
+.clear:after{ content: ''; display: block; clear: both;}
+.wrap{ width: 743px; margin: 30px auto}
+.header{ width: 700px; height: 30px; margin: 19px 30px 18px 13px;
+    background: url(../img/headerBg.png) no-repeat 0px 0px;}
+.header h1{ font-size: 26px; color: #4e4e4e; padding-left: 10px; float: left; }
+.header a{ color: #0f820c; float: left; padding: 13px 0 0 13px; font-weight: bold;  font-size: 14px;}
+.list{ width: 700px; padding: 0 30px 0 13px;}
+.list li{ width: 160px; float: left; line-height: 22px; padding: 0 20px 23px 0;}
+.list li img{ display: block; padding-bottom: 5px;}
+.list li strong{ color: #0f820c; font-weight: normal; word-spacing: -2px;}
+.list li span,.list li p{ color: #8b8b8b;}
+.list li h2{ color: #515151; font-weight: normal; display: inline;}
+.list li div{ background: url(../img/jiantou.png) no-repeat 0 5px;}
+.list li h3{  color: #a3a3a3; float: left; padding-left: 15px; font-weight: normal;}
+.list li em{ float: right; font-style: normal;  font-weight: normal;}
+.list li.paddR0{ padding-right: 0;}
