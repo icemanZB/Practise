@@ -37,7 +37,7 @@ $(function () {
                 num = 0;
             }
         }
-        ;
+
         initImg(num);
     });
 
